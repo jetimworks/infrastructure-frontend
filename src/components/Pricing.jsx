@@ -4,21 +4,7 @@ import { useInView } from 'framer-motion';
 
 const plans = [
   {
-    name: 'Starter',
-    price: '$20',
-    period: 'per month',
-    desc: 'Good for prototyping.',
-    features: [
-      '100 concurrent connections guaranteed',
-      'Basic monitoring',
-      'Consulting included',
-    ],
-    cta: 'Get started',
-    href: 'mailto:info@jetimworks.com?subject=Starter%20Plan',
-    featured: false,
-  },
-  {
-    name: 'Growth',
+    name: 'StartUp',
     price: '$70',
     period: 'per month',
     desc: 'For products scaling up with more demanding workloads.',
@@ -31,8 +17,26 @@ const plans = [
       'Free consulting to move to self-managed AWS or Digital Ocean',
     ],
     cta: 'Get started',
-    href: 'mailto:info@jetimworks.com?subject=Growth%20Plan',
+    href: 'mailto:info@jetimworks.com?subject=StartUp%20Plan',
     featured: true,
+  },
+  {
+    name: 'Production',
+    price: '$150',
+    period: 'per month',
+    desc: 'For products with high traffic and reliability requirements.',
+    features: [
+      '100,000 concurrent connections guaranteed',
+      'Monitoring & alerts',
+      'Reliable backups',
+      'Frequent security audits',
+      'Free scaling up',
+      'Free consulting to move to self-managed AWS or Digital Ocean',
+      'Weekly performance reports',
+    ],
+    cta: 'Get started',
+    href: 'mailto:info@jetimworks.com?subject=Production%20Plan',
+    featured: false,
   },
   {
     name: 'Enterprise',
@@ -69,8 +73,11 @@ export default function Pricing() {
         <div style={{ marginBottom: 'var(--sp-8)' }}>
           <p className="eyebrow" style={{ marginBottom: 'var(--sp-3)' }}>Pricing</p>
           <h2 className="display" style={{ fontSize: 'var(--text-2xl)', fontWeight: 600, letterSpacing: '-0.025em' }}>
-            Load-based pricing.
+            Load-based pricing.*
           </h2>
+          <p style={{ marginTop: 'var(--sp-3)', fontSize: 'var(--text-sm)', color: 'var(--text-muted)', maxWidth: 600, lineHeight: 1.6 }}>
+            * We use AWS or Digital Ocean under the hood and carefully decide on the provisioning of infrastructure to guarantee performance and number of connections. The decisions are entirely our decision and we are responsible for purchasing additional instances without incurring any additional costs on the side of the customer.
+          </p>
         </div>
 
         <div
