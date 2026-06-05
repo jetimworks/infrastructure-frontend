@@ -7,14 +7,11 @@ const plans = [
     name: 'Starter',
     price: '$20',
     period: 'per month',
-    desc: 'For early-stage products that need a reliable foundation.',
+    desc: 'Good for prototyping.',
     features: [
-      '1 VPS server',
-      '1 SQL database',
-      'Redis cache',
-      'Storage & backups',
+      '100 concurrent connections guaranteed',
       'Basic monitoring',
-      'Email support',
+      'Consulting included',
     ],
     cta: 'Get started',
     href: 'mailto:info@jetimworks.com?subject=Starter%20Plan',
@@ -24,36 +21,35 @@ const plans = [
     name: 'Growth',
     price: '$70',
     period: 'per month',
-    desc: 'For products scaling up and needing more resources.',
+    desc: 'For products scaling up with more demanding workloads.',
     features: [
-      '2 VPS servers',
-      '2 SQL databases',
-      'Redis cache',
-      'Storage & backups',
-      'Monitoring + alerts',
-      'CI/CD setup',
-      'Email & chat support',
+      '1000 concurrent connections guaranteed',
+      'Monitoring & alerts',
+      'Reliable backups',
+      'Frequent security audits',
+      'Free scaling up',
+      'Free consulting to move to self-managed AWS or Digital Ocean',
     ],
     cta: 'Get started',
     href: 'mailto:info@jetimworks.com?subject=Growth%20Plan',
     featured: true,
   },
   {
-    name: 'Business',
+    name: 'Enterprise',
     price: 'Contact us',
     period: '',
     desc: 'For teams that need a complete, hands-off infrastructure.',
     features: [
-      'Unlimited servers',
-      'Unlimited databases',
-      'Advanced monitoring',
-      'Production environment',
-      'CI/CD & automation',
-      'Security audits',
-      'Dedicated support',
+      'Unlimited connections',
+      'Advanced monitoring & alerts',
+      'Daily backups with instant restore',
+      'Continuous security audits',
+      'Auto-scaling infrastructure',
+      'White-glove migration support',
+      'Dedicated infrastructure engineer',
     ],
     cta: 'Get in touch',
-    href: 'mailto:info@jetimworks.com?subject=Business%20Plan',
+    href: 'mailto:info@jetimworks.com?subject=Enterprise%20Plan',
     featured: false,
   },
 ];
@@ -73,7 +69,7 @@ export default function Pricing() {
         <div style={{ marginBottom: 'var(--sp-8)' }}>
           <p className="eyebrow" style={{ marginBottom: 'var(--sp-3)' }}>Pricing</p>
           <h2 className="display" style={{ fontSize: 'var(--text-2xl)', fontWeight: 600, letterSpacing: '-0.025em' }}>
-            Straightforward pricing.
+            Load-based pricing.
           </h2>
         </div>
 

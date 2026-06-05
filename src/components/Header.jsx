@@ -19,17 +19,24 @@ export default function Header() {
       }}
     >
       <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
-        <span
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontWeight: 600,
-            fontSize: 'var(--text-lg)',
-            color: 'var(--text-h)',
-            letterSpacing: '-0.02em',
-          }}
-        >
-          jetimworks
-        </span>
+        <a href="#" style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <img
+            src="/logo_transparent.jpg"
+            alt="Jetimworks"
+            style={{ height: 34, width: 'auto', objectFit: 'contain' }}
+          />
+          <span
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 600,
+              fontSize: 'var(--text-base)',
+              color: 'var(--text-h)',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            jetimworks
+          </span>
+        </a>
 
         <a
           href="#contact"
