@@ -106,7 +106,6 @@ export default function Services() {
 
   const gridStyle = {
     display: 'grid',
-    gridTemplateColumns: 'repeat(4, 1fr)',
     gap: '1px',
     background: 'var(--border)',
     border: '1px solid var(--border)',
@@ -124,24 +123,6 @@ export default function Services() {
         borderBottom: '1px solid var(--border)',
       }}
     >
-      <style>{`
-        #services .services-grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-        @media (max-width: 1023px) {
-          #services .services-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-        }
-        @media (max-width: 640px) {
-          #services .services-grid {
-            grid-template-columns: 1fr;
-          }
-          #services .services-row:last-child {
-            border-radius: 0 0 10px 10px;
-          }
-        }
-      `}</style>
       <div className="container">
         <div style={{ marginBottom: 'var(--sp-8)' }}>
           <p className="eyebrow" style={{ marginBottom: 'var(--sp-3)' }}>What we offer</p>
