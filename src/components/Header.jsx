@@ -38,18 +38,34 @@ export default function Header() {
           </span>
         </a>
 
-        <a
-          href="#contact"
-          className="eyebrow"
-          style={{
-            color: 'var(--text-muted)',
-            transition: 'color var(--dur-fast) var(--ease-out)',
-          }}
-          onMouseEnter={e => e.target.style.color = 'var(--text-h)'}
-          onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}
-        >
-          Contact
-        </a>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 24 }}>
+          <a
+            href="https://jetimworks.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="eyebrow"
+            style={{
+              color: 'var(--text-muted)',
+              transition: 'color var(--dur-fast) var(--ease-out)',
+            }}
+            onMouseEnter={e => e.target.style.color = 'var(--text-h)'}
+            onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}
+          >
+            Home
+          </a>
+          <a
+            href="#contact"
+            className="eyebrow"
+            style={{
+              color: 'var(--text-muted)',
+              transition: 'color var(--dur-fast) var(--ease-out)',
+            }}
+            onMouseEnter={e => e.target.style.color = 'var(--text-h)'}
+            onMouseLeave={e => e.target.style.color = 'var(--text-muted)'}
+          >
+            Contact
+          </a>
+        </div>
       </div>
     </motion.header>
   );
