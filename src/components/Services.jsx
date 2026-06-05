@@ -104,6 +104,16 @@ export default function Services() {
     transition: 'background var(--dur-fast)',
   });
 
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4, 1fr)',
+    gap: '1px',
+    background: 'var(--border)',
+    border: '1px solid var(--border)',
+    borderRadius: 10,
+    overflow: 'hidden',
+  };
+
   return (
     <section
       id="services"
@@ -114,6 +124,24 @@ export default function Services() {
         borderBottom: '1px solid var(--border)',
       }}
     >
+      <style>{`
+        #services .services-grid {
+          grid-template-columns: repeat(4, 1fr);
+        }
+        @media (max-width: 1023px) {
+          #services .services-grid {
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+        @media (max-width: 640px) {
+          #services .services-grid {
+            grid-template-columns: 1fr;
+          }
+          #services .services-row:last-child {
+            border-radius: 0 0 10px 10px;
+          }
+        }
+      `}</style>
       <div className="container">
         <div style={{ marginBottom: 'var(--sp-8)' }}>
           <p className="eyebrow" style={{ marginBottom: 'var(--sp-3)' }}>What we offer</p>
@@ -122,18 +150,7 @@ export default function Services() {
           </h2>
         </div>
 
-        <div
-          ref={ref}
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '1px',
-            background: 'var(--border)',
-            border: '1px solid var(--border)',
-            borderRadius: 10,
-            overflow: 'hidden',
-          }}
-        >
+        <div ref={ref} className="services-grid" style={gridStyle}>
           {row1.map((s, i) => (
             <motion.div
               key={s.name}
@@ -161,18 +178,7 @@ export default function Services() {
           ))}
         </div>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(4, 1fr)',
-            gap: '1px',
-            background: 'var(--border)',
-            border: '1px solid var(--border)',
-            borderTop: 'none',
-            borderRadius: '0 0 10px 10px',
-            overflow: 'hidden',
-          }}
-        >
+        <div className="services-row services-grid" style={{ ...gridStyle, borderTop: 'none', borderRadius: '0 0 10px 10px' }}>
           {row2.map((s, i) => (
             <motion.div
               key={s.name}
