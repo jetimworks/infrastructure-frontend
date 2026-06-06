@@ -35,8 +35,8 @@ function LandingPage() {
 }
 
 function ProtectedRoute({ children }) {
-  const isAuthenticated = localStorage.getItem('admin_auth') === 'true';
-  return isAuthenticated ? children : <Navigate to="/admin" replace />;
+  const token = localStorage.getItem('admin_token');
+  return token === 'valid' ? children : <Navigate to="/admin" replace />;
 }
 
 export default function App() {

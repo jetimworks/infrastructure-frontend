@@ -15,9 +15,14 @@ export default function Login() {
     // Simulate auth delay
     await new Promise(resolve => setTimeout(resolve, 800));
 
-    localStorage.setItem('admin_auth', 'true');
-    setLoading(false);
-    navigate('/admin/dashboard');
+    if (email === 'jetimworks@gmail.com' && password === 'jetimpassword') {
+      localStorage.setItem('admin_token', 'valid');
+      setLoading(false);
+      navigate('/admin/dashboard');
+    } else {
+      setLoading(false);
+      alert('Invalid credentials');
+    }
   };
 
   return (
