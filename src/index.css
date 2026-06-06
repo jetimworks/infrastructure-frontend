@@ -482,11 +482,11 @@ ul { list-style: none; }
 }
 
 .stat-label {
-  font-size: 11px;
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text);
 }
 
 .stat-value {
@@ -545,8 +545,8 @@ ul { list-style: none; }
 }
 
 .zone-label {
-  font-size: var(--text-xs);
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: var(--text-muted);
@@ -591,7 +591,7 @@ ul { list-style: none; }
 
 .node-detail {
   display: block;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -647,7 +647,7 @@ ul { list-style: none; }
 }
 
 .service-detail {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -693,7 +693,7 @@ ul { list-style: none; }
 }
 
 .resource-used {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -736,8 +736,9 @@ ul { list-style: none; }
 }
 
 .security-label {
-  font-size: var(--text-xs);
-  color: var(--text-muted);
+  font-size: var(--text-sm);
+  color: var(--text);
+  font-weight: 500;
 }
 
 .security-value {
@@ -896,9 +897,9 @@ ul { list-style: none; }
 }
 
 .activity-time {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
-  min-width: 72px;
+  min-width: 80px;
 }
 
 .activity-info {
@@ -914,7 +915,7 @@ ul { list-style: none; }
 }
 
 .activity-detail {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -996,7 +997,7 @@ ul { list-style: none; }
 }
 
 .security-detail {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -1059,7 +1060,7 @@ ul { list-style: none; }
 }
 
 .infra-server-meta {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin-top: 2px;
 }
@@ -1079,8 +1080,8 @@ ul { list-style: none; }
   grid-template-columns: 1fr 80px 1fr 80px;
   gap: var(--sp-3);
   padding: var(--sp-2) var(--sp-3);
-  font-size: var(--text-xs);
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--text-muted);
   border-bottom: 1px solid var(--border);
@@ -1123,7 +1124,7 @@ ul { list-style: none; }
 }
 
 .infra-network-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin-bottom: var(--sp-1);
 }
@@ -1155,8 +1156,8 @@ ul { list-style: none; }
 
 .dns-record-type {
   color: var(--accent);
-  font-size: var(--text-xs);
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 600;
 }
 
 .dns-record-value {
@@ -1166,7 +1167,7 @@ ul { list-style: none; }
 
 .dns-record-ttl {
   color: var(--text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
 }
 
 .ssl-status-valid {
@@ -1200,13 +1201,13 @@ ul { list-style: none; }
 }
 
 .monitor-uptime-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin-top: var(--sp-1);
 }
 
 .monitor-uptime-incidents {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin-top: 2px;
 }
@@ -1230,7 +1231,7 @@ ul { list-style: none; }
 }
 
 .monitor-response-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -1335,12 +1336,12 @@ ul { list-style: none; }
 }
 
 .alert-meta {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
 .alert-resolved {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: #22c55e;
   font-weight: 500;
 }
@@ -1350,8 +1351,8 @@ ul { list-style: none; }
   grid-template-columns: 100px 1fr 80px 80px;
   gap: var(--sp-3);
   padding: var(--sp-2) var(--sp-3);
-  font-size: var(--text-xs);
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--text-muted);
   border-bottom: 1px solid var(--border);
@@ -1373,7 +1374,7 @@ ul { list-style: none; }
 
 .incident-date {
   color: var(--text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
 }
 
 .incident-title {
@@ -1403,7 +1404,7 @@ ul { list-style: none; }
 }
 
 .mttr-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -1420,7 +1421,7 @@ ul { list-style: none; }
 }
 
 .mttr-meta-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -1458,7 +1459,7 @@ ul { list-style: none; }
 }
 
 .settings-toggle-desc {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   margin-top: 2px;
 }
@@ -1514,8 +1515,8 @@ ul { list-style: none; }
   grid-template-columns: 1fr 80px 80px 100px;
   gap: var(--sp-3);
   padding: var(--sp-2) var(--sp-3);
-  font-size: var(--text-xs);
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: 600;
   text-transform: uppercase;
   color: var(--text-muted);
   border-bottom: 1px solid var(--border);
@@ -1542,7 +1543,7 @@ ul { list-style: none; }
 
 .user-email {
   color: var(--text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   margin-top: 2px;
 }
 
@@ -1562,17 +1563,17 @@ ul { list-style: none; }
 
 .mfa-enabled {
   color: #22c55e;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-weight: 500;
 }
 
 .mfa-disabled {
   color: var(--text-muted);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
 }
 
 .user-last-active {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -1608,13 +1609,13 @@ ul { list-style: none; }
 }
 
 .api-key-meta {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
 .key-masked {
   font-family: monospace;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   color: var(--text-muted);
 }
 
@@ -1656,10 +1657,10 @@ ul { list-style: none; }
 }
 
 .ip-tag {
-  padding: 2px var(--sp-2);
+  padding: 4px var(--sp-3);
   background: var(--surface-alt);
   border-radius: 4px;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   font-family: monospace;
   color: var(--text);
 }
@@ -1674,10 +1675,10 @@ ul { list-style: none; }
 
 .audit-row {
   display: grid;
-  grid-template-columns: 80px 1fr 140px 100px;
+  grid-template-columns: 90px 1fr 150px 110px;
   gap: var(--sp-3);
-  padding: var(--sp-2) var(--sp-3);
-  font-size: var(--text-xs);
+  padding: var(--sp-3) var(--sp-3);
+  font-size: var(--text-sm);
   border-bottom: 1px solid var(--border);
   align-items: center;
 }
@@ -1715,11 +1716,11 @@ ul { list-style: none; }
   display: inline-flex;
   align-items: center;
   gap: var(--sp-3);
-  padding: var(--sp-3) var(--sp-5);
+  padding: var(--sp-4) var(--sp-5);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 8px;
-  font-size: var(--text-sm);
+  font-size: var(--text-base);
   font-weight: 500;
   color: var(--text-h);
   cursor: pointer;
@@ -1766,15 +1767,15 @@ ul { list-style: none; }
 }
 
 .report-meta-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
 .report-meta-value {
-  font-size: var(--text-sm);
-  font-weight: 500;
+  font-size: var(--text-base);
+  font-weight: 600;
   color: var(--text-h);
 }
 
@@ -1827,15 +1828,15 @@ ul { list-style: none; }
 }
 
 .report-contacts-label {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
 .report-contact-chip {
-  padding: 2px var(--sp-3);
+  padding: 4px var(--sp-3);
   background: var(--surface-alt);
   border-radius: 4px;
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text);
 }
 
@@ -1874,7 +1875,7 @@ ul { list-style: none; }
 }
 
 .notification-desc {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -1954,12 +1955,12 @@ ul { list-style: none; }
 }
 
 .delivery-desc {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
 .delivery-status {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
   padding: 2px var(--sp-2);
   border-radius: 4px;
@@ -1972,10 +1973,10 @@ ul { list-style: none; }
 }
 
 .delivery-connect {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--accent);
   font-weight: 500;
-  padding: var(--sp-1) var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
   border: 1px solid var(--accent);
   border-radius: 4px;
   cursor: pointer;
@@ -2022,7 +2023,7 @@ ul { list-style: none; }
 }
 
 .schedule-status {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   padding: 2px var(--sp-2);
   border-radius: 4px;
 }
@@ -2040,7 +2041,7 @@ ul { list-style: none; }
 .schedule-meta {
   display: flex;
   gap: var(--sp-2);
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
@@ -2051,7 +2052,7 @@ ul { list-style: none; }
 }
 
 .schedule-recipient {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--accent);
 }
 
@@ -2061,9 +2062,9 @@ ul { list-style: none; }
 }
 
 .schedule-action-btn {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
-  padding: var(--sp-1) var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
   border: 1px solid var(--border);
   border-radius: 4px;
   background: transparent;
@@ -2113,17 +2114,17 @@ ul { list-style: none; }
 }
 
 .recent-report-meta {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
 .recent-report-size {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--text-muted);
 }
 
 .recent-report-download {
-  font-size: var(--text-xs);
+  font-size: var(--text-sm);
   color: var(--accent);
   font-weight: 500;
   background: transparent;
