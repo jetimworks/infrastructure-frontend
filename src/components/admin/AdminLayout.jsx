@@ -25,7 +25,7 @@ export default function AdminLayout({ children }) {
       navigate(item.path);
     } else {
       // Refresh dashboard
-      if (window.location.pathname !== '/admin/dashboard') {
+      if (window.location.hash !== '#/admin/dashboard') {
         navigate('/admin/dashboard');
       } else {
         window.location.reload();
@@ -67,7 +67,7 @@ export default function AdminLayout({ children }) {
           {navItems.map((item, i) => (
             <motion.button
               key={item.label}
-              className={`nav-item ${window.location.pathname === item.path ? 'active' : ''}`}
+              className={`nav-item ${window.location.hash === '#' + item.path ? 'active' : ''}`}
               initial={{ opacity: 0, x: -12 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.05 + 0.2 }}
