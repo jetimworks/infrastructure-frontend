@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -41,7 +41,7 @@ function ProtectedRoute({ children }) {
 
 export default function App() {
   return (
-    <HashRouter>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/admin" element={<Login />} />
@@ -118,6 +118,6 @@ export default function App() {
           }
         />
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
