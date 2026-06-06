@@ -15,6 +15,7 @@ import Monitoring from './pages/admin/Monitoring';
 import Reporting from './pages/admin/Reporting';
 import Settings from './pages/admin/Settings';
 import AdminLayout from './components/admin/AdminLayout';
+import { ProjectProvider } from './contexts/ProjectContext';
 
 function LandingPage() {
   return (
@@ -48,9 +49,11 @@ export default function App() {
           path="/admin/dashboard"
           element={
             <ProtectedRoute>
-              <AdminLayout>
-                <Dashboard />
-              </AdminLayout>
+              <ProjectProvider>
+                <AdminLayout>
+                  <Dashboard />
+                </AdminLayout>
+              </ProjectProvider>
             </ProtectedRoute>
           }
         />
@@ -58,9 +61,11 @@ export default function App() {
           path="/admin/security"
           element={
             <ProtectedRoute>
-              <AdminLayout>
-                <Security />
-              </AdminLayout>
+              <ProjectProvider>
+                <AdminLayout>
+                  <Security />
+                </AdminLayout>
+              </ProjectProvider>
             </ProtectedRoute>
           }
         />
@@ -68,9 +73,11 @@ export default function App() {
           path="/admin/infrastructure"
           element={
             <ProtectedRoute>
-              <AdminLayout>
-                <Infrastructure />
-              </AdminLayout>
+              <ProjectProvider>
+                <AdminLayout>
+                  <Infrastructure />
+                </AdminLayout>
+              </ProjectProvider>
             </ProtectedRoute>
           }
         />
@@ -78,9 +85,11 @@ export default function App() {
           path="/admin/monitoring"
           element={
             <ProtectedRoute>
-              <AdminLayout>
-                <Monitoring />
-              </AdminLayout>
+              <ProjectProvider>
+                <AdminLayout>
+                  <Monitoring />
+                </AdminLayout>
+              </ProjectProvider>
             </ProtectedRoute>
           }
         />
@@ -88,9 +97,11 @@ export default function App() {
           path="/admin/reporting"
           element={
             <ProtectedRoute>
-              <AdminLayout>
-                <Reporting />
-              </AdminLayout>
+              <ProjectProvider>
+                <AdminLayout>
+                  <Reporting />
+                </AdminLayout>
+              </ProjectProvider>
             </ProtectedRoute>
           }
         />
@@ -98,9 +109,11 @@ export default function App() {
           path="/admin/settings"
           element={
             <ProtectedRoute>
-              <AdminLayout>
-                <Settings />
-              </AdminLayout>
+              <ProjectProvider>
+                <AdminLayout>
+                  <Settings />
+                </AdminLayout>
+              </ProjectProvider>
             </ProtectedRoute>
           }
         />

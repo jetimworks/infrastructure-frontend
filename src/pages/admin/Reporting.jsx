@@ -1,9 +1,8 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useProject } from '../../contexts/ProjectContext';
+import { projects } from '../../contexts/projectConstants';
 
-const projects = ['Petracore', 'Reccur', 'Lena', 'Jetimworks', 'Antlar'];
-
-// Sample data for reports
 const reportData = {
   Petracore: {
     project: 'Petracore',
@@ -309,7 +308,7 @@ function generateCSV(data) {
 }
 
 export default function Reporting() {
-  const [selectedProject, setSelectedProject] = useState('Jetimworks');
+  const { selectedProject } = useProject();
   const [generating, setGenerating] = useState(false);
   const [scheduleModal, setScheduleModal] = useState(false);
 
@@ -338,18 +337,6 @@ export default function Reporting() {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="dashboard-header-left">
-          <div className="project-selector">
-            <select
-              value={selectedProject}
-              onChange={(e) => setSelectedProject(e.target.value)}
-              className="project-dropdown"
-            >
-              {projects.map(p => (
-                <option key={p} value={p}>{p}</option>
-              ))}
-            </select>
-            <span className="dropdown-arrow">▾</span>
-          </div>
           <div>
             <h1 className="dashboard-title">Reporting & Communications</h1>
             <p className="dashboard-subtitle">Generate reports, schedule deliveries, and manage customer communications</p>

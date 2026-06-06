@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import { useProject } from '../../contexts/ProjectContext';
 
 const navItems = [
   { label: 'Dashboard', icon: '◈', path: '/admin/dashboard', isPage: true },
@@ -12,6 +13,7 @@ const navItems = [
 
 export default function AdminLayout({ children }) {
   const navigate = useNavigate();
+  const { selectedProject, setSelectedProject, projects } = useProject();
 
   const handleSignOut = () => {
     localStorage.removeItem('admin_auth');
@@ -46,6 +48,19 @@ export default function AdminLayout({ children }) {
             <span className="brand-name">Infra</span>
             <a href="/" className="brand-badge brand-link">By Jetimworks</a>
           </div>
+        </div>
+
+        <div className="sidebar-project-selector">
+          <select
+            value={selectedProject}
+            onChange={(e) => setSelectedProject(e.target.value)}
+            className="project-dropdown"
+          >
+            {projects.map(p => (
+              <option key={p} value={p}>{p}</option>
+            ))}
+          </select>
+          <span className="dropdown-arrow">▾</span>
         </div>
 
         <nav className="sidebar-nav">

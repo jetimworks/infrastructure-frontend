@@ -316,6 +316,24 @@ ul { list-style: none; }
   object-fit: contain;
 }
 
+.sidebar-project-selector {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: var(--sp-3) var(--sp-3);
+  margin: var(--sp-3) var(--sp-3) var(--sp-2);
+}
+
+.sidebar-project-selector .project-dropdown {
+  min-width: 120px;
+  font-size: var(--text-xs);
+  padding: var(--sp-1) var(--sp-6) var(--sp-1) var(--sp-2);
+}
+
+.sidebar-project-selector .dropdown-arrow {
+  right: var(--sp-2);
+}
+
 .sidebar-nav {
   display: flex;
   flex-direction: column;

@@ -1,7 +1,5 @@
-import { useState } from 'react';
 import { motion } from 'framer-motion';
-
-const projects = ['Petracore', 'Reccur', 'Lena', 'Jetimworks', 'Antlar'];
+import { useProject } from '../../contexts/ProjectContext';
 
 const projectData = {
   Petracore: {
@@ -192,8 +190,7 @@ function SectionCard({ title, children, delay = 0 }) {
 }
 
 export default function Dashboard() {
-  const [selectedProject, setSelectedProject] = useState('Jetimworks');
-
+  const { selectedProject } = useProject();
   const data = projectData[selectedProject];
   const activity = activityData[selectedProject];
 
@@ -206,18 +203,6 @@ export default function Dashboard() {
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
         <div className="dashboard-header-left">
-          <div className="project-selector">
-            <select
-              value={selectedProject}
-              onChange={(e) => setSelectedProject(e.target.value)}
-              className="project-dropdown"
-            >
-              {projects.map(p => (
-                <option key={p} value={p}>{p}</option>
-              ))}
-            </select>
-            <span className="dropdown-arrow">▾</span>
-          </div>
           <div>
             <h1 className="dashboard-title">Infrastructure Overview</h1>
             <p className="dashboard-subtitle">Your managed infrastructure at a glance</p>
