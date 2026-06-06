@@ -6,6 +6,7 @@ const navItems = [
   { label: 'Infrastructure', icon: '◉', path: '/admin/infrastructure', isPage: true },
   { label: 'Monitoring', icon: '◎', path: '/admin/monitoring', isPage: true },
   { label: 'Security', icon: '◐', path: '/admin/security', isPage: true },
+  { label: 'Reporting', icon: '◫', path: '/admin/reporting', isPage: true },
   { label: 'Settings', icon: '◑', path: '/admin/settings', isPage: true },
 ];
 

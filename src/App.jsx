@@ -12,6 +12,7 @@ import Dashboard from './pages/admin/Dashboard';
 import Security from './pages/admin/Security';
 import Infrastructure from './pages/admin/Infrastructure';
 import Monitoring from './pages/admin/Monitoring';
+import Reporting from './pages/admin/Reporting';
 import Settings from './pages/admin/Settings';
 import AdminLayout from './components/admin/AdminLayout';
 
@@ -79,6 +80,16 @@ export default function App() {
             <ProtectedRoute>
               <AdminLayout>
                 <Monitoring />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/reporting"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <Reporting />
               </AdminLayout>
             </ProtectedRoute>
           }
