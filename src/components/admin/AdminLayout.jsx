@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 
 const navItems = [
   { label: 'Dashboard', icon: '◈', path: '/admin/dashboard', isPage: true },
-  { label: 'Infrastructure', icon: '◉', path: '/admin/dashboard', isPage: false },
-  { label: 'Monitoring', icon: '◎', path: '/admin/dashboard', isPage: false },
+  { label: 'Infrastructure', icon: '◉', path: '/admin/infrastructure', isPage: true },
+  { label: 'Monitoring', icon: '◎', path: '/admin/monitoring', isPage: true },
   { label: 'Security', icon: '◐', path: '/admin/security', isPage: true },
-  { label: 'Settings', icon: '◑', path: '/admin/dashboard', isPage: false },
+  { label: 'Settings', icon: '◑', path: '/admin/settings', isPage: true },
 ];
 
 export default function AdminLayout({ children }) {

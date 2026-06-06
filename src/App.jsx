@@ -10,6 +10,9 @@ import Footer from './components/Footer';
 import Login from './pages/admin/Login';
 import Dashboard from './pages/admin/Dashboard';
 import Security from './pages/admin/Security';
+import Infrastructure from './pages/admin/Infrastructure';
+import Monitoring from './pages/admin/Monitoring';
+import Settings from './pages/admin/Settings';
 import AdminLayout from './components/admin/AdminLayout';
 
 function LandingPage() {
@@ -56,6 +59,36 @@ export default function App() {
             <ProtectedRoute>
               <AdminLayout>
                 <Security />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/infrastructure"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <Infrastructure />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/monitoring"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <Monitoring />
+              </AdminLayout>
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/settings"
+          element={
+            <ProtectedRoute>
+              <AdminLayout>
+                <Settings />
               </AdminLayout>
             </ProtectedRoute>
           }
