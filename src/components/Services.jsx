@@ -4,8 +4,17 @@ import { useRef } from 'react';
 
 const services = [
   {
-    name: 'VPS',
-    desc: 'Virtual private server setup and configuration, production-ready from day one.',
+    name: 'Zero Vendor Lock-in',
+    desc: "We don't hold your data hostage. When you outgrow us, we provide free, white-glove migration to your own AWS or DigitalOcean account.",
+    icon: (
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 12h14M12 5l7 7-7 7"/>
+      </svg>
+    ),
+  },
+  {
+    name: 'Dedicated Compute',
+    desc: "No shared 'noisy neighbors.' Your app runs on isolated, dedicated VPS environments configured specifically for your workload.",
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="3" width="20" height="14" rx="2"/>
@@ -14,19 +23,8 @@ const services = [
     ),
   },
   {
-    name: 'SSD Storage',
-    desc: 'Fast, reliable solid-state storage with automated backups and redundancy.',
-    icon: (
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-        <path d="M3.29 7 12 12l8.71-5"/>
-        <path d="M12 22V12"/>
-      </svg>
-    ),
-  },
-  {
-    name: 'Postgres Database',
-    desc: 'Relational database setup with schema design, access controls, and reliable backups.',
+    name: 'Managed Postgres& Redis',
+    desc: 'Relational and in-memory databases optimized for performance, with automated daily backups and strict access controls.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <ellipse cx="12" cy="5" rx="9" ry="3"/>
@@ -37,23 +35,20 @@ const services = [
     ),
   },
   {
-    name: 'Redis Store',
-    desc: 'In-memory cache and session store configured for performance and reliability.',
+    name: 'Zero-Downtime Deployments',
+    desc: 'Battle-tested CI/CD pipelines with automated rollbacks. We use lightweight, native tooling—no bloated enterprise bloatware.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2a10 10 0 1 0 10 10"/>
-        <path d="M12 6v6l4 2"/>
-        <path d="M18 2l4 4-4 4"/>
-        <path d="M22 2l-4 4"/>
+        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
       </svg>
     ),
   },
   {
-    name: 'Zero-Downtime Deployments',
-    desc: 'CI/CD pipelines with smooth, uninterrupted releases and automated rollbacks.',
+    name: 'Aggressive Security',
+    desc: 'Firewalls, access controls, and security audits to keep your systems protected.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
       </svg>
     ),
   },
@@ -69,11 +64,13 @@ const services = [
     ),
   },
   {
-    name: 'Aggressive Security',
-    desc: 'Firewalls, access controls, and security audits to keep your systems protected.',
+    name: 'SSD Storage',
+    desc: 'Fast, reliable solid-state storage with automated backups and redundancy.',
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+        <path d="M3.29 7 12 12l8.71-5"/>
+        <path d="M12 22V12"/>
       </svg>
     ),
   },

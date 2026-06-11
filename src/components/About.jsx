@@ -28,10 +28,10 @@ export default function About() {
             We handle the infrastructure so you don't have to think about it.
           </p>
           <p style={{ fontSize: 'var(--text-base)', color: 'var(--text)', lineHeight: 1.75 }}>
-            Most small SaaS teams end up spending time they don't have configuring servers,
-            wrestling with databases, and figuring out why backups stopped working.
-            We take that off your plate. You ship your product, we make sure the
-            infrastructure underneath it stays solid.
+            Most small SaaS teams end up spending time they don't have configuring servers
+            and wrestling with databases. We take that off your plate using automated CI/CD,
+            standardized security audits, and proactive monitoring. You ship your product,
+            and our systems (and our engineers) make sure the infrastructure underneath it stays solid.
           </p>
         </motion.div>
       </div>

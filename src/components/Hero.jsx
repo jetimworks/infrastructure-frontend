@@ -37,7 +37,7 @@ export default function Hero() {
             letterSpacing: '-0.03em',
           }}
         >
-          Your infrastructure, handled properly.
+          Stop managing servers. Start shipping code.
         </motion.h1>
 
         <motion.p
@@ -53,8 +53,8 @@ export default function Hero() {
             lineHeight: 1.6,
           }}
         >
-          We set up and manage your servers, databases, and production environment
-          so you can focus on building your product.
+          Dedicated, managed infrastructure (VPS, Postgres, Redis) for growing SaaS teams.
+          Get the reliability of an in-house DevOps engineer for a flat monthly fee—without the vendor lock-in.
         </motion.p>
 
         <motion.div
@@ -70,10 +70,10 @@ export default function Hero() {
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
-            Schedule a call
+            Get a Free Infrastructure Audit
           </a>
-          <a href="mailto:info@jetimworks.com" className="btn btn-ghost">
-            Send an email
+          <a href="#pricing" className="btn btn-ghost">
+            View Pricing
           </a>
         </motion.div>
       </div>

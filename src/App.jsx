@@ -2,13 +2,14 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Dashboard from './components/Dashboard';
 import Stats from './components/Stats';
 import Pricing from './components/Pricing';
 import About from './components/About';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import Login from './pages/admin/Login';
-import Dashboard from './pages/admin/Dashboard';
+import AdminDashboardPage from './pages/admin/Dashboard';
 import Security from './pages/admin/Security';
 import Infrastructure from './pages/admin/Infrastructure';
 import Monitoring from './pages/admin/Monitoring';
@@ -24,6 +25,7 @@ function LandingPage() {
       <main>
         <Hero />
         <Services />
+        <Dashboard />
         <Stats />
         <Pricing />
         <About />
@@ -51,7 +53,7 @@ export default function App() {
             <ProtectedRoute>
               <ProjectProvider>
                 <AdminLayout>
-                  <Dashboard />
+                  <AdminDashboardPage />
                 </AdminLayout>
               </ProjectProvider>
             </ProtectedRoute>
